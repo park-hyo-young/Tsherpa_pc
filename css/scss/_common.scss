@@ -168,7 +168,7 @@ input[type="text"] {
                 content: '';
                 width: 9px;
                 height: 2px;
-                top: 5px;
+                top: 50%;
                 left: -22px;
                 transform: rotate(-45deg);
                 background-color: #fff;
@@ -176,9 +176,9 @@ input[type="text"] {
             & + label::before {
                 position: absolute;
                 content: '';
-                width: 7px;
+                width: 6px;
                 height: 2px;
-                top: 6.5px;
+                top: 50%;
                 left: -26px;
                 transform: rotate(45deg);
                 background-color: #fff;
@@ -188,6 +188,7 @@ input[type="text"] {
     > label {
         position: relative;
         margin-left: 10px;
+        line-height: 20px;
         color: #666;
         font-size: 13px !important;
         letter-spacing: -0.33px;
