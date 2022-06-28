@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head></head>
+<body>
+    <div class="wrap">
+        <div id="login-before"></div>
+        <div class="login-stu-main-area">
+            <div class="login-inner">
+               <h3 class="login-stu-title">나의 SNS 계정 찾기</h3>
+               <div class="login-form">
+                    <h4>휴대폰 번호 인증을 통해 계정을 찾아 드립니다.</h4>
+                    <form class="login-search-arer">
+                        <div class="login-phone-arer flex-center">
+                            <label for="login-phonenum">휴대폰 번호</label>
+                            <input type="text" id="login-phonenum" placeholder="숫자만 입력">
+                            <!-- 인증번호 발송 하면 basic_btn을 before_btn으로 변경 -->
+                            <a href="#none" class="before_btn">인증 번호 발송</a>
+                        </div>
+                        <div class="login-certify-arer flex-center">
+                            <label for="login-certify">인증 번호</label>
+                            <input type="text" id="login-certify" placeholder="인증 번호 6자리">
+                            <span>03:00</span>
+                        </div>
+                    </form>
+                    <!-- 인증번호 발송 하면 before_btn을 basic_btn으로 변경 -->
+                    <a href="#none" class="btns basic_btn">확인</a>
+               </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
