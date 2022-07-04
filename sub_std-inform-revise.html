@@ -106,6 +106,45 @@
                 </div>
             </div> -->
         </div>
+        <div class="revise-password-popup popup-back">
+            <div class="pass-popup-inner popup-top">
+                <div class="popup-heading">
+                    <h5>비밀번호 변경</h5>
+                    <a href="#none" class="close-btn"><img src="images/icon-close.png" alt="닫기버튼"></a>
+                </div>
+                <div class="popup-body">
+                    <p>비밀번호 변경 시 Caps Lock 키가 눌려 있지는 않은지 확인하시기 바랍니다.</p>
+                    <table summary="비밀번호 변경">
+                        <caption>비밀번호 변경</caption>
+                        <colgroup>
+                            <col width="145px;">
+                            <col width="calc(100% - 145px);">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">현재비밀번호</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">새 비밀번호(*)</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">새 비밀번호 확인</th>
+                                <td>
+                                    <input type="text">
+                                    <p>*영문 대/소문자+숫자+특수문자 조합 (8~20자 이내)</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="popup-btns flex-center">
+                        <a href="#none" class="summit-btn">확인</a>
+                        <a href="#none" class="cancle-btn">취소</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>

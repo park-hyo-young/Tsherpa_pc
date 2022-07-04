@@ -465,6 +465,7 @@
                                             letter-spacing: -0.33px;
                                             background: $main-color url('../images/ic-info.png') top 12px left 11px no-repeat;
                                             box-sizing: border-box;
+                                            z-index: 10;
                                         }
                                     }
                                 }
@@ -504,25 +505,8 @@
                                             letter-spacing: -0.33px;
                                             background: $main-color url('../images/ic-info.png') top 12px left 11px no-repeat;
                                             box-sizing: border-box;
+                                            z-index: 10;
                                         }
-                                    }
-                                }
-                                &.close {
-                                    position: relative;
-                                    color: #333;
-                                    background: url('../images/ic-private.png') left center no-repeat;
-                                    z-index: 10;
-                                    &::after {
-                                        position: absolute;
-                                        content: '';
-                                        width: 380px;
-                                        height: 500px;
-                                        top: -25.5px;
-                                        left: -292px;
-                                        border-radius: 20px;
-                                        opacity: 0.5;
-                                        background-color: #fff;
-                                        z-index: -10;
                                     }
                                 }
                             }
@@ -591,6 +575,23 @@
                         }
                         .sharing-btn {
                             display: block;
+                        }
+                    }
+                    &.close {
+                        .class-show {
+                            color: #333 !important;
+                            background: url('../images/ic-private.png') left center no-repeat;
+                        }
+                        figure {
+                            img {
+                                opacity: 0.5 !important;
+                            }
+                        }
+                        h6, a, p, span {
+                            color: #a7a7a7 !important;
+                        }
+                        .student-offcial-btn, .invite-code-arer {
+                            background-color: #f5f5f5 !important;
                         }
                     }
                 }

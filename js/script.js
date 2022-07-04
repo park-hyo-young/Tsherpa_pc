@@ -37,12 +37,14 @@ $(document).ready(function(){
         },
     });
 
-    $("#class-basic-setting").on("click", function(e){
+    $(".basic-class-btn").on('click', function(e){
         e.preventDefault();
-        if ($(this).is(':checked') == true){
-            $(".delete").hide();
+        if ($(this).hasClass('active') === true){
+            $(this).removeClass('active');
+            $('.delete').show();
         }else{
-            $(".delete").show();
+            $(this).addClass('active');
+            $('.delete').hide();
         }
     });
 
@@ -52,7 +54,11 @@ $(document).ready(function(){
     });
     $('.close-btn').click(function(e){
         e.preventDefault();
-        $('.class-setting-popup, .class-login-popup, .student-loding-popup, .login-warning-popup').hide();
+        $('.class-setting-popup, .class-login-popup, .student-loding-popup, .login-warning-popup, .revise-password-popup').hide();
+    });
+    $('.revise-password').click(function(e){
+        e.preventDefault();
+        $('.revise-password-popup').show();
     });
 
     $('.page-btn').on('click', function(e){
