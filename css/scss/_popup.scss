@@ -193,6 +193,7 @@
                         background-color: $main-color;
                     }
                     &.delete {
+                        display: none;
                         color: #fff;
                         background-color: #ff7e00;
                     }

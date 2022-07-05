@@ -20,6 +20,12 @@ $background-color : #f2f7fc;
     width: 100%;
     height: calc(100vh - 65px);
     margin: 0 auto;
+    &.revise-wrap {
+        min-width: 1370px;
+    }
+    &.offcial-wrap {
+        min-width: 1400px;
+    } 
 }
 .cf {
     &::after {
@@ -40,9 +46,9 @@ $background-color : #f2f7fc;
 .popup-top {
     position: relative;
     top: 50%;
-    margin: 0 auto;
+    left: 50%;
     box-sizing: border-box;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     &.big-popup-inner {
         width: 740px;
     }
