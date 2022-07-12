@@ -60,71 +60,89 @@
         } 
         .revisc-table {
             width: 910px;
-            th, td {
-                height: 58px;
-                padding: 0 20px;
-                border: 1px solid #e0e0e0;
-                text-align: left;
-                line-height: 56px;
-                box-sizing: border-box;
-            }
-            th {
-                font-size: 16px;
-                font-weight: 500;
-                letter-spacing: -0.4px;
-                background-color: #f0f3f7;
-            }
-            td {
-                color: #666;
-                font-size: 14px;
-                letter-spacing: -0.35px;
-                .revise-password {
-                    display: block;
-                    width: 108px;
-                    height: 36px;
-                    border-radius: 6px;
-                    font-size: 14px;
-                    color: #fff;
-                    background-color: $main-color;
-                }
-                .revise-text-box {
-                    height: 36px;
-                    line-height: 34px;
-                    color: #666;
-                    line-height: 14px;
-                    &.class-num {
-                        width: 160px;
-                    }
-                    &.class-invite-code {
-                        width: 364px;
-                    }
-                    &.class-phone-num {
-                        margin: 10px;
-                        width: 100px;
+            border-radius: 6px;
+            border-style: hidden;
+            box-shadow: 0 0 0 1px #e0e0e0;
+            tr {
+                &:first-child {
+                    th {
+                        border-top-left-radius: 6px;
                     }
                 }
-                p {
-                    float: right;
-                    padding-top: 12px;
-                    padding-right: 40px;
-                    color: #bbb;
-                    font-size: 12px;
-                    line-height: 16px;
-                    letter-spacing: -0.3px;
+                &:last-child {
+                    th {
+                        border-bottom-left-radius: 6px;
+                    }
                 }
-                select {
-                    width: 100px;
-                    height: 36px;
-                    margin-right: 10px;
-                    padding: 0 11px;
-                    border-radius: 6px;
+                th, td {
+                    height: 58px;
+                    padding: 0 20px;
                     border: 1px solid #e0e0e0;
+                    text-align: left;
+                    line-height: 56px;
+                    box-sizing: border-box;
+                }
+                th {
+                    font-size: 16px;
+                    font-weight: 500;
+                    letter-spacing: -0.4px;
+                    background-color: #f0f3f7;
+                }
+                td {
                     color: #666;
-                    line-height: 34px;
-                    appearance: none;
-                    background: url('../images/ic-dropdown.png') right 5px center no-repeat;
-                    &:focus {
-                        outline: none;
+                    font-size: 14px;
+                    letter-spacing: -0.35px;
+                    .revise-password {
+                        display: block;
+                        width: 108px;
+                        height: 36px;
+                        border-radius: 6px;
+                        font-size: 14px;
+                        color: #fff;
+                        background-color: $main-color;
+                    }
+                    .revise-text-box {
+                        height: 36px;
+                        line-height: 34px;
+                        color: #666;
+                        line-height: 14px;
+                        &.class-num {
+                            width: 160px;
+                        }
+                        &.class-invite-code {
+                            width: 365px;
+                            &::placeholder {
+                                color: #666;
+                            }
+                        }
+                        &.class-phone-num {
+                            margin: 10px;
+                            width: 100px;
+                        }
+                    }
+                    p {
+                        float: right;
+                        padding-top: 12px;
+                        padding-right: 40px;
+                        color: #bbb;
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: -0.3px;
+                    }
+                    select {
+                        width: 100px;
+                        height: 36px;
+                        margin-right: 10px;
+                        padding: 0 11px;
+                        border-radius: 6px;
+                        border: 1px solid #e0e0e0;
+                        color: #666;
+                        line-height: 34px;
+                        appearance: none;
+                        background: url('../images/ic-dropdown.png') right 5px center no-repeat;
+                        &:focus {
+                            outline: none;
+                        }
                     }
                 }
             }
@@ -165,6 +183,9 @@
                     padding: 0;
                     color: #747774;
                     box-sizing: border-box;
+                    &::placeholder {
+                        color: #747774;
+                    }
                 }
                 >a {
                     display: block;
@@ -212,7 +233,7 @@
                 line-height: 56px;
                 td {
                     padding: 0 20px;
-                    color: #666;
+                    color: #000;
                 }
             }
         }
