@@ -1,10 +1,9 @@
 $(document).ready(function(){
-    
-    $('head').load('head.html');
-    $('#login-before').load('header-before.html');
-    $('#login-stu').load('header-stu.html');
-    $('#login-tea').load('header-tea.html');
 
+    // include 함수
+    includeLayout();
+    
+    // 급식 메뉴 슬라이드
     var swiper = new Swiper(".school-food", {
         navigation: {
             nextEl: ".next-day",
@@ -12,6 +11,7 @@ $(document).ready(function(){
         },
     });
 
+    // class 이동 버튼
     $('.move-class').click(function(e){
         e.preventDefault();
         $('.move-class-list').show();
@@ -21,6 +21,7 @@ $(document).ready(function(){
         $('.move-class-list').hide();
     });
 
+    // 학급관리 슬라이드
     var swiper = new Swiper(".class-offcial-group", {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -37,6 +38,7 @@ $(document).ready(function(){
         },
     });
 
+    // 체크박스 체크되어 있으면 버튼 숨기고 보이기
     $(".basic-class-btn").on('click', function(e){
         e.preventDefault();
         if ($(this).hasClass('active') === true){
@@ -48,19 +50,24 @@ $(document).ready(function(){
         }
     });
 
-    $('.setting-btn').click(function(e){
-        e.preventDefault();
-        $('.class-setting-popup').show();
-    });
+    // 팝업 열고 닫기
     $('.close-btn').click(function(e){
         e.preventDefault();
         $('.class-setting-popup, .class-login-popup, .student-loding-popup, .login-warning-popup, .revise-password-popup').hide();
+    });
+    $('.setting-btn').click(function(e){
+        e.preventDefault();
+        $('.class-setting-popup').show();
     });
     $('.revise-password').click(function(e){
         e.preventDefault();
         $('.revise-password-popup').show();
     });
+    $('.stu-all-summit').click(function(){
+        $('.student-loding-popup').show();
+    });
 
+    // 페이지 이동시 버튼에 active
     $('.page-btn').on('click', function(e){
         if ($(this).hasClass('active') === true) {
             $(this).siblings().removeClass('active');
@@ -70,6 +77,7 @@ $(document).ready(function(){
         }
     });
 
+    // 비밀번호 show/hide 이미지 변경
     $('.hide-password').on('click', function(e){
         if ($(this).hasClass('show-password') === true) {
             $(this).removeClass('show-password');
@@ -77,8 +85,17 @@ $(document).ready(function(){
             $(this).addClass('show-password');
         }
     });
-
-    $('.stu-all-summit').click(function(){
-        $('.student-loding-popup').show();
-    });
 })
+
+// lode html
+function includeLayout() {
+    var includeArea = $('[data-include]');
+    var self, url;
+    $.each(includeArea, function(){
+        self = $(this);
+        url = self.data('include');
+        self.load(url, function(){
+            self.removeAttr('data-include');
+        });
+    });
+}
